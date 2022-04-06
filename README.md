@@ -26,11 +26,13 @@ Remember to wait 90 seconds to have DB initialized, due to [the recommended way 
 If you know that your PC will boot up _SQL Server_ faster than 90 seconds you can decrease this time in _run-initialization.sh_ script.
 
 ## Assignment
+Extend the database schema with the following:
 
-A ProductOrderLineItem table which contains id, orderId (integer), productid (integer), quantity (integer), date (date).
+- A ProductOrderLineItem Table which contains Id, OrderId (integer), ProductId (integer), Quantity (integer), Date (date).
 
-An AverageNumOrdersPerProductPerWeekDay View which accepts an interval of dates, product Id, and returns returns two columns:  Weekday ( 'MON', 'TUE', etc ), AverageQuantity (integer).
+- An AverageNumOrdersPerProductPerWeekDay View (Virtual Table) which accepts an interval of Dates, ProductIds, and dynamically calculates and returns two columns:  Weekday ( 'MON', 'TUE', etc ), AverageQuantity (integer).
 
+Extend this schema with whatever method you think is best, as long as the database is updated upon docker-compose up or docker-compose build
 
 An example query in Hasura > API. Dont worry if the exact names of the variables and tables are not exactly as the example, as long as its clear and intuitive.
 
