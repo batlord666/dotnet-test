@@ -1,0 +1,9 @@
+- name: mssql
+  kind: mssql
+  configuration:
+    connection_info:
+      connection_string: Driver={ODBC Driver 17 for SQL Server};Server=db;Database=product-db;Uid=SA;Pwd=CorrectHorseBatteryStapleFor$
+      pool_settings:
+        idle_timeout: 5
+        max_connections: 50
+  tables: "!include mssql/tables/tables.yaml"
